@@ -1,0 +1,52 @@
+---
+export interface SEOProps {
+  title: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+const {
+  title,
+  description = 'True crime stories and analysis',
+  canonical,
+  image = '/assets/og-default.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime
+} = Astro.props as SEOProps;
+
+const site = new URL(Astro.site || 'https://example.com');
+const canonicalUrl = canonical ? new URL(canonical, site).toString() : new URL(Astro.url.pathname, site).toString();
+---
+<>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={image} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+
+  {type === 'article' && publishedTime && (
+    <script type="application/ld+json">{JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      datePublished: publishedTime,
+      dateModified: modifiedTime || publishedTime,
+      mainEntityOfPage: canonicalUrl
+    })}</script>
+  )}
+</>
+
+
