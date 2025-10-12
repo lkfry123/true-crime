@@ -10,4 +10,19 @@
   to = "/blog/"
   status = 301
 
+[[redirects]]
+  from = "/tags"
+  to = "/tags/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/blog/:slug/"
+  status = 301
+
+[[redirects]]
+  from = "/tags/:tag"
+  to = "/tags/:tag/"
+  status = 301
+
 
