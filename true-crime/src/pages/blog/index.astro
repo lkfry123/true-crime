@@ -18,9 +18,9 @@ const renderedPosts = await Promise.all(
   <h1>Blog</h1>
   <section style="margin-top:1rem;">
     {renderedPosts.map(({ entry: p, Content }) => (
-      <details class="card" style="margin-bottom: 1rem; padding: 1rem;">
+      <details class="card" data-slug={p.slug} id={p.slug} style="margin-bottom: 1rem; padding: 1rem;">
         <summary style="cursor:pointer; list-style: none; display:flex; align-items:baseline; gap:.75rem;">
-          <h3 style="margin:0;">{p.data.title}</h3>
+          <h3 style="margin:0;"><a href={`#${p.slug}`} style="text-decoration:none;">{p.data.title}</a></h3>
           <span style="color:var(--muted); font-size:.9rem;">{new Date(p.data.date).toLocaleDateString()}</span>
         </summary>
         {p.data.hero && <img src={p.data.hero} alt={p.data.title} style="margin-top: .75rem;" />}
@@ -30,6 +30,19 @@ const renderedPosts = await Promise.all(
       </details>
     ))}
   </section>
+  <script>
+    const openFromHash = () => {
+      const slug = location.hash ? location.hash.slice(1) : '';
+      if (!slug) return;
+      const el = document.querySelector(`details[data-slug="${slug}"]`);
+      if (el) {
+        el.open = true;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+  </script>
 </Base>
 
 
