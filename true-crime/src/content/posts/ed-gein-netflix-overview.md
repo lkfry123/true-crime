@@ -3,7 +3,7 @@ title: "Ed Gein: The Netflix Documentary Overview"
 description: "Context, timeline, and what the documentary gets right and wrong."
 date: "2025-09-15"
 tags: ["ed-gein", "analysis", "documentary"]
-hero: "/assets/og-default.jpg"
+hero: "/images/ed-gein-netflix.jpg"
 author: "Staff Writer"
 draft: false
 ---

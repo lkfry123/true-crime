@@ -3,7 +3,7 @@ title: "Ed Gein: A Concise Timeline of Key Events"
 description: "From Plainfield to national infamy — a brief chronology."
 date: "2025-10-01"
 tags: ["ed-gein", "timeline"]
-hero: "/assets/og-default.jpg"
+hero: "/images/ed-gein-timeline.jpg"
 author: "Staff Writer"
 draft: false
 ---
