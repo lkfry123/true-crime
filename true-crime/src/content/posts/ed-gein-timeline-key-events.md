@@ -41,7 +41,7 @@ Mental state at the time and possible drivers (from evaluations and primary fili
 - What reports emphasize: profound grief and dependency tied to his mother’s death; extreme isolation; peculiar beliefs and ritualized making in the home; and a pattern more consistent with compulsion/ritual than instrumental predation.
 - What they do not provide: a single, neat “motive.” Documents point to a convergence of loss, isolation, and disordered thinking rather than profit‑ or power‑seeking. Where later accounts add specifics without citing inventories, interviews, or evaluations, treat them as lore.
 
-The case also inspired decades of cultural retellings, often straddling the line between fact and myth. Its durability stems from adaptable images—an isolated Midwestern home, a domineering parent, and domestic objects made macabre—motifs storytellers reuse to turn the ordinary uncanny.
+
 
 ---
 
@@ -61,6 +61,8 @@ The case offered a durable set of images—an isolated Midwestern home, a domine
 - Compare portrayals with the record. Ask which elements a film or podcast adapts (e.g., isolation, mother–son dynamic) and what new argument it makes.
 
 ---
+
+<div class="annotations">
 
 ## Annotated sources (Chicago Author–Date)
 
@@ -91,5 +93,7 @@ The case offered a durable set of images—an isolated Midwestern home, a domine
 
 - Purdue Online Writing Lab. (2025). *Chicago Manual of Style 18th Edition*. https://owl.purdue.edu/owl/research_and_citation/chicago_manual_18th_edition/cmos_formatting_and_style_guide/chicago_manual_of_style_18th_edition.html
   – Style guidance for presenting annotations and references on the web.
+
+</div>
 
 

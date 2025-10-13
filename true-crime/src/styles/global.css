@@ -70,4 +70,16 @@ nav a:hover { color: var(--text); }
 
 footer.site-footer { border-top: 1px solid var(--border); color: var(--muted); }
 
+/* Smaller text for annotated sources sections */
+.annotations {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.annotations h2,
+.annotations h3 {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+.annotations a { color: var(--muted); }
+
 
