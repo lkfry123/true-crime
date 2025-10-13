@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import HeadSEO from "@/components/HeadSEO.astro";
 import { getCollection } from 'astro:content';
+import SocialShare from "@/components/SocialShare.astro";
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -23,6 +24,7 @@ const { Content } = await post.render();
       <p style="color:var(--muted);">{new Date(post.data.date).toLocaleDateString()} {post.data.author && `· ${post.data.author}`}</p>
       {post.data.hero && <img src={post.data.hero} alt={title} />}
     </header>
+    <SocialShare title={title} url={(new URL(Astro.url.pathname, Astro.site || 'https://edgein.netlify.app')).toString()} />
     <div>
       <Content />
     </div>

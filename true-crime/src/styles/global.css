@@ -82,4 +82,13 @@ footer.site-footer { border-top: 1px solid var(--border); color: var(--muted); }
 }
 .annotations a { color: var(--muted); }
 
+/* Share bar */
+.share-bar { display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem; }
+.share-btn { display:inline-flex; align-items:center; gap:.4rem; background: var(--card); color: var(--text); border:1px solid var(--border); border-radius:999px; padding:.35rem .7rem; font-size:.9rem; text-decoration:none; cursor:pointer; }
+.share-btn:hover { border-color: var(--accent); }
+.share-btn.facebook { color:#1877f2; }
+.share-btn.email { color: var(--muted); }
+.share-btn.instagram { color:#e1306c; }
+.share-btn.native { color: var(--text); }
+
 
