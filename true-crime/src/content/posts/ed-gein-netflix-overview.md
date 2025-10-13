@@ -8,7 +8,7 @@ author: "Staff Writer"
 draft: false
 ---
 
-Ed Gein’s crimes have cast a long shadow over American pop culture. From inspiring characters like Norman Bates and Leatherface to reshaping the way we talk about rural isolation and horror, his story continues to surface in new retellings. This review focuses on Netflix’s "Monsters: The Lollipop Killer" (Episode 2: “Plainfield” — hypothetical episode title used for clarity) and compares its claims to contemporaneous record.
+Ed Gein’s crimes have cast a long shadow over American pop culture. From inspiring characters like Norman Bates and Leatherface to reshaping the way we talk about rural isolation and horror, his story continues to surface in new retellings. This review focuses on Netflix’s drama "Monster: The Ed Gein Story" and compares its claims to contemporaneous record.
 
 ## What the documentary covers
 
@@ -47,14 +47,14 @@ The episode references Nazi paraphernalia and imagery. In reading the record:
 
 ## Annotated sources (Chicago Author–Date)
 
-- Netflix. 2025. *Monsters: The Lollipop Killer*. Episode 2, “Plainfield.” Netflix. – Episode reviewed here; useful for contrasting narration with documents.
+- Netflix. 2025. *Monster: The Ed Gein Story*. Netflix. – Drama reviewed here; useful for contrasting narration with documents.
 - Jenkins, Philip. 1994. *Using Murder: The Social Construction of Serial Homicide*. New York: Aldine de Gruyter. – Frames how media and policing co‑produce narratives the episode relies on.
 - Douglas, John E., Ann W. Burgess, Allen G. Burgess, and Robert K. Ressler. 2013. *Crime Classification Manual: A Standard System for Investigating and Classifying Violent Crimes*. 3rd ed. San Francisco: Jossey‑Bass. – For interpreting investigative language used in the show.
 - Purdue Online Writing Lab. 2025. “Chicago Manual of Style 18th Edition.” Accessed October 2025. https://owl.purdue.edu/owl/research_and_citation/chicago_manual_18th_edition/cmos_formatting_and_style_guide/chicago_manual_of_style_18th_edition.html – Style reference.
 
 ## Annotated sources (APA 7th)
 
-- Netflix. (2025). *Monsters: The Lollipop Killer* (Episode 2, “Plainfield”). Netflix. – Primary media referenced; use for time‑stamped comparisons.
+- Netflix. (2025). *Monster: The Ed Gein Story*. Netflix. – Primary media referenced; use for time‑stamped comparisons.
 - Jenkins, P. (1994). *Using murder: The social construction of serial homicide*. Aldine de Gruyter. – Explains how sensational motifs enter public memory.
 - Douglas, J. E., Burgess, A. W., Burgess, A. G., & Ressler, R. K. (2013). *Crime classification manual: A standard system for investigating and classifying violent crimes* (3rd ed.). Jossey‑Bass. – Helps decode profiling language.
 - Purdue Online Writing Lab. (2025). *Chicago Manual of Style 18th Edition*. https://owl.purdue.edu/owl/research_and_citation/chicago_manual_18th_edition/cmos_formatting_and_style_guide/chicago_manual_of_style_18th_edition.html – Style reference.
