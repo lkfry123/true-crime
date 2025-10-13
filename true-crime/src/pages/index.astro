@@ -13,9 +13,9 @@ const restPosts = allPosts.filter((p) => p.slug !== heroPost?.slug).slice(0, 12)
 
   {heroPost && (
     <section class="hero" style="margin: 1.5rem 0;">
-      {heroPost.data.hero && <a href={`/blog/#${heroPost.slug}`}> <img src={heroPost.data.hero} alt={heroPost.data.title} /> </a>}
+      {heroPost.data.hero && <a href={`/blog/${heroPost.slug}/`}> <img src={heroPost.data.hero} alt={heroPost.data.title} /> </a>}
       <div class="content">
-        <h2><a href={`/blog/#${heroPost.slug}`}>{heroPost.data.title}</a></h2>
+        <h2><a href={`/blog/${heroPost.slug}/`}>{heroPost.data.title}</a></h2>
         {heroPost.data.description && <p>{heroPost.data.description}</p>}
         <div class="tags">
           {(heroPost.data.tags || []).map((t) => <span class="tag">#{t}</span>)}
@@ -29,7 +29,7 @@ const restPosts = allPosts.filter((p) => p.slug !== heroPost?.slug).slice(0, 12)
     <div class="grid">
       {restPosts.map((p) => (
         <PostCard
-          href={`/blog/#${p.slug}`}
+          href={`/blog/${p.slug}/`}
           title={p.data.title}
           description={p.data.description}
           date={p.data.date}
