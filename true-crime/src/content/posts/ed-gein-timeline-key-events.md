@@ -33,7 +33,15 @@ How to read the scene analytically:
 - Separate what is documented (receipts, inventories, affidavits, coroner records) from later lore. When a claim lacks a document type, treat it as disputed until you can place it in the record.
 
 ### Aftermath (1958–1984; approx. ages 52–77)
-Gein was found legally insane and confined for life. The case inspired decades of cultural retellings, often straddling the line between fact and myth. Cultural impact arises from adaptable images: an isolated Midwestern home, a domineering parent, and domestic objects made macabre—motifs storytellers reuse to turn the ordinary uncanny.
+Gein was found legally insane and confined for life. From a medical and psychological standpoint, the realistic goal in a case like this would not be full “rehabilitation,” but stabilization plus risk management.
+
+- Acute stabilization: If psychotic processes were active, the standard of care would include antipsychotic medication, medical monitoring, and structured inpatient routines to reduce agitation and disorganization.
+- Psychosocial treatment: Once stabilized, interventions could include CBT for psychosis (to reality‑test unusual beliefs), occupational therapy (to replace ritualized, isolating routines with supervised activity), and social‑skills work to reduce isolation.
+- Risk assessment and management: Modern practice relies on structured professional judgment tools (e.g., HCR‑20) and multidisciplinary reviews to identify dynamic risk factors—severe isolation, access to gravesites or remains, unstructured time—and to create controls (supervision, restricted access, routine checks). Mid‑20th‑century practice had fewer standardized tools, which limited prevention options.
+- Family and developmental factors: Therapy addressing grief, dependency, and rigid parent–child roles might have reduced vulnerability had it been available earlier; once severe behaviors were entrenched, treatment shifts to harm reduction and containment.
+- Community protections: If ever considered for step‑down, conditions would include sustained treatment adherence, structured housing, close supervision, and legal mechanisms for rapid rehospitalization on relapse. Given the gravity of the facts, permanent secure hospitalization was the ethical route.
+
+The case also inspired decades of cultural retellings, often straddling the line between fact and myth. Its durability stems from adaptable images—an isolated Midwestern home, a domineering parent, and domestic objects made macabre—motifs storytellers reuse to turn the ordinary uncanny.
 
 ---
 
