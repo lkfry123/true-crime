@@ -13,6 +13,14 @@ import '@/styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {title && <title>{title}</title>}
     {description && <meta name="description" content={description} />}
+    {/* Google Analytics */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6BV4CR368"></script>
+    <script>
+      {`window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-G6BV4CR368');`}
+    </script>
   </head>
   <body>
     <header class="site-header">
