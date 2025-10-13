@@ -23,7 +23,6 @@ const renderedPosts = await Promise.all(
           <h3 style="margin:0;"><a href={`#${p.slug}`} style="text-decoration:none;">{p.data.title}</a></h3>
           <span style="color:var(--muted); font-size:.9rem;">{new Date(p.data.date).toLocaleDateString()}</span>
         </summary>
-        {p.data.hero && <img src={p.data.hero} alt={p.data.title} style="margin-top: .75rem;" />}
         <div style="margin-top:.75rem;">
           <Content />
         </div>
