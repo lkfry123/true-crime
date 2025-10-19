@@ -13,39 +13,16 @@ import '@/styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {title && <title>{title}</title>}
     {description && <meta name="description" content={description} />}
-    {/* Consent Mode (place your CMP banner script immediately after this block) */}
-    <script>
-      {`// Define dataLayer and the gtag function.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-
-      // IMPORTANT — update regions list to your requirements (ISO 3166-2 codes)
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied',
-        'regions': [] // e.g., ['US-CA','US-CO','GB','DE','FR']
-      });
-      // Default for all other regions
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
-      });`}
-    </script>
-    {/* <!-- CMP banner script here --> */}
-    {/* Google tag (gtag.js) */}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6BV4CR368"></script>
-    <script>
-      {`window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-G6BV4CR368');`}
-    </script>
+    {/* Google Tag Manager */}
+    <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WXH45CQN');`}</script>
   </head>
   <body>
+    {/* Google Tag Manager (noscript) */}
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXH45CQN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="site-header">
       <div class="container inner">
         <a href="/">True Crime</a>
