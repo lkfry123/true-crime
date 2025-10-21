@@ -32,7 +32,7 @@ function collectPostUrls() {
 }
 
 function main() {
-  const rows = [['URL','Ignored']];
+  const rows = [];
   const urls = [
     ...staticUrls,
     ...collectPostUrls()
