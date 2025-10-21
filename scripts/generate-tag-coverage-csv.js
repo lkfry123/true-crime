@@ -1,5 +1,5 @@
 // Generate a CSV compatible with GTM Tag Coverage upload
-// Required columns: Url, Ignored (TRUE/FALSE)
+// Required columns: URL, Ignored (TRUE/FALSE)
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -32,7 +32,7 @@ function collectPostUrls() {
 }
 
 function main() {
-  const rows = [['Url','Ignored']];
+  const rows = [['URL','Ignored']];
   const urls = [
     ...staticUrls,
     ...collectPostUrls()
@@ -46,7 +46,7 @@ function main() {
   const outDir = path.resolve(process.cwd(), 'tag-coverage');
   fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, 'tag_coverage.csv');
-  const csv = rows.map(r => r.map(v => `"${String(v).replaceAll('"','""')}"`).join(',')).join('\n');
+  const csv = rows.map(r => r.join(',')).join('\n');
   fs.writeFileSync(outPath, csv, 'utf8');
   console.log(`Wrote ${outPath}`);
 }
