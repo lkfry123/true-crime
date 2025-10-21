@@ -1,10 +1,11 @@
-// Generate a simple CSV of site URLs for GTM Tag Coverage upload/checks
-// Columns: url,container_id,measurement_id,expected,notes
+// Generate a CSV compatible with GTM Tag Coverage upload
+// Required columns: Url, Ignored (TRUE/FALSE)
 
 import fs from 'node:fs';
 import path from 'node:path';
 
 const SITE = 'https://edgein.netlify.app';
+// For reference only (not included in CSV)
 const CONTAINER = 'GTM-WXH45CQN';
 const MEASUREMENT = 'G-G6BV4CR368';
 
@@ -31,7 +32,7 @@ function collectPostUrls() {
 }
 
 function main() {
-  const rows = [['url','container_id','measurement_id','expected','notes']];
+  const rows = [['Url','Ignored']];
   const urls = [
     ...staticUrls,
     ...collectPostUrls()
@@ -39,10 +40,7 @@ function main() {
   for (const u of urls) {
     rows.push([
       `${SITE}${u}`,
-      CONTAINER,
-      MEASUREMENT,
-      'google_tag (GA4 via GTM)',
-      'Expect GTM on-page snippet and GA4 via GTM'
+      'FALSE'
     ]);
   }
   const outDir = path.resolve(process.cwd(), 'tag-coverage');
