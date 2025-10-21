@@ -1,0 +1,81 @@
+---
+import Base from "@/layouts/Base.astro";
+import HeadSEO from "@/components/HeadSEO.astro";
+import PostCard from "@/components/PostCard.astro";
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const tagSet = new Set(posts.flatMap((p) => p.data.tags || []));
+  return Array.from(tagSet).map((tag) => ({ params: { tag }, props: { tag } }));
+}
+
+const { tag } = Astro.props as { tag: string };
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const posts = allPosts
+  .filter((p) => (p.data.tags || []).includes(tag))
+  .sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+
+// Related tags (chips) across all content except current tag
+const relatedTags = Array.from(
+  new Set(
+    allPosts
+      .flatMap((p) => p.data.tags || [])
+      .filter((t) => t && t !== tag)
+  )
+).slice(0, 8);
+
+// Optional curated reading order for known tag "ed-gein"
+const readingOrderSlugs = tag === 'ed-gein'
+  ? [
+      'ed-gein-timeline-key-events',
+      'ed-gein-cultural-impact-horror-media',
+      'ed-gein-netflix-overview',
+    ]
+  : [];
+const readingOrder = readingOrderSlugs
+  .map((slug) => posts.find((p) => p.slug === slug))
+  .filter(Boolean);
+---
+<Base title={`#${tag}`} description={`Posts tagged ${tag}`}>
+  <HeadSEO title={`#${tag}`} description={`Posts tagged ${tag}`} canonical={`/tags/${tag}/`} />
+  <h1># {tag}</h1>
+
+  {tag === 'ed-gein' && (
+    <section class="card" style="margin-top:1rem; padding:1rem;">
+      <h2 style="margin-top:0;">About this tag</h2>
+      <p>Curated articles covering the Ed Gein case: a concise timeline, cultural echoes in film and TV, and a documentary overview.</p>
+      {readingOrder.length > 0 && (
+        <ol style="margin-top:.75rem;">
+          {readingOrder.map((p) => (
+            <li><a href={`/blog/${p.slug}/`}>{p.data.title}</a></li>
+          ))}
+        </ol>
+      )}
+    </section>
+  )}
+
+  {relatedTags.length > 0 && (
+    <div style="margin-top:1rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+      {relatedTags.map((t) => (
+        <a class="tag" href={`/tags/${t}/`}>#{t}</a>
+      ))}
+    </div>
+  )}
+
+  <div class="grid" style="margin-top:1rem;">
+    {posts.map((p) => (
+      <PostCard href={`/blog/${p.slug}/`} title={p.data.title} description={p.data.description} date={p.data.date} tags={p.data.tags} />
+    ))}
+  </div>
+
+  <script type="application/ld+json">{JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `#${tag}`,
+    url: new URL(Astro.url.pathname, Astro.site || 'https://edgein.netlify.app').toString(),
+    hasPart: posts.map((p) => ({ '@type': 'Article', headline: p.data.title, url: `/blog/${p.slug}/` }))
+  })}</script>
+</Base>
+
+

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edgein.netlify.app/sitemap.xml
+
+
