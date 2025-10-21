@@ -9,12 +9,6 @@ import '@/styles/global.css';
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="dvA2yCqe6mB_oQB8mtECxj0Xdm26KvZHJ2XXwHsQ" />
-    {title && <title>{title}</title>}
-    {description && <meta name="description" content={description} />}
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     {/* Google Tag Manager (GTM-WXH45CQN) */}
     <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,6 +17,14 @@ import '@/styles/global.css';
       })(window,document,'script','dataLayer','GTM-WXH45CQN');`}</script>
     {/* End Google Tag Manager */}
     {/* GA4 is configured in GTM (Container GTM-WXH45CQN) using Measurement ID G-G6BV4CR368 */}
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="dvA2yCqe6mB_oQB8mtECxj0Xdm26KvZHJ2XXwHsQ" />
+    {title && <title>{title}</title>}
+    {description && <meta name="description" content={description} />}
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   </head>
   <body>
     {/* Google Tag Manager (noscript) */}
