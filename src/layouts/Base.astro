@@ -1,4 +1,12 @@
 ---
+/** Canonical + og:url (managed by Cursor) **/
+const ORIGIN = 'https://edgein.netlify.app';
+
+const { url } = Astro;
+const raw = url?.pathname ?? '/';
+const pathname = raw === '/' ? '/' : (raw.endsWith('/') ? raw : `${raw}/`);
+const full = `${ORIGIN}${pathname}`;
+
 export interface Props {
   title?: string;
   description?: string;
@@ -26,6 +34,10 @@ import '@/styles/global.css';
     <meta name="google-site-verification" content="dvA2yCqe6mB_oQB8mtECxj0Xdm26KvZHJ2XXwHsQ" />
     {title && <title>{title}</title>}
     {description && <meta name="description" content={description} />}
+    <!-- CURSOR_CANONICAL_START -->
+    <link rel="canonical" href={full} />
+    <meta property="og:url" content={full} />
+    <!-- CURSOR_CANONICAL_END -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   </head>
   <body>
